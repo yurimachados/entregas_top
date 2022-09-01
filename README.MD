@@ -2,12 +2,14 @@
 
 ### Contexto
 
-Na plataforma da Husky, existem três atores principais que se relacionam com uma
+Na plataforma da <a href="https://entregas.gohusky.net/sistema/">Husky</a>, existem três atores principais que se relacionam com uma
 entrega: a operação de motoboy que recebe a solicitação de entrega; o cliente da
 empresa de motoboy que solicita uma entrega; o entregador que realiza a entrega.
+
 Cada entrega possui as seguintes informações: cliente, entregador, status, ponto de
 coleta, ponto de destino. Todos os campos são obrigatórios na criação de uma
 entrega, menos o entregador.
+
 Cada entrega possui pelo menos 4 status: Novo, atribuído assim que a entrega é
 criada; Entregando, atribuído quando o entregador está se deslocando para o ponto
 de destino; Finalizado, atribuído quando a entrega foi feita com sucesso; Cancelada,
