@@ -1,7 +1,12 @@
 <?php
 
 require 'config.php';
+require 'src/Entrega.php';
 
+$pesquisa = new Entrega($conn);
+$pesquisa = $pesquisa->exibirEntregas();
+
+var_dump($pesquisa);
 
 ?>
 
@@ -17,3 +22,4 @@ require 'config.php';
     
 </body>
 </html>
+
