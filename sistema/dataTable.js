@@ -3,14 +3,6 @@ $(document).ready( function () {
     var table = $('#orderTable').DataTable({
         paging: true,
         searching: true,
-        bFilter: false,
-        processing: true,
-        serverside: true,
-        ajax: {
-            url: 'teste.php',
-            type: 'POST'
-        },
-        dom: 'Blfrtip',
         language: {
             lengthMenu: 'Exibir _MENU_ registros por página',
             zeroRecords: 'Nada encontrado',
