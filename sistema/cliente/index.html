@@ -8,20 +8,22 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="./style.css" type="text/css">
-  <link rel="stylesheet" href="/sistema/global.css" type="text/css">
+  <link rel="stylesheet" href="../global.css" type="text/css">
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   <!-- Jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <!-- Scripts -->
-  <script src="./script.js"></script>
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
   <title>Entregas Top</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg bg-light">
+  <nav id='navbar' class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Entregas Top</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -31,10 +33,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/sistema/"><i class="bi bi-house"></i> Home</a>
+            <a class="nav-link" aria-current="page" href="../index.html"><i class="bi bi-house"></i> Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/financeiro/"><i class="bi bi-cash-stack"></i> Financeiro</a>
+            <a class="nav-link" href="../financeiro/"><i class="bi bi-cash-stack"></i> Financeiro</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
@@ -42,15 +44,15 @@
               <i class="bi bi-person-lines-fill"></i> Cadastro
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/cadastro/entregador/">Entregadores</a></li>
+              <li><a class="dropdown-item" href="../entregador/">Entregadores</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="/cadastro/cliente/">Clientes</a></li>
+              <li><a class="dropdown-item" href="../cliente/">Clientes</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/configuracao/"><i class="bi bi-gear"></i> Configurações</a>
+            <a class="nav-link" href="../configuracao/"><i class="bi bi-gear"></i> Configurações</a>
           </li>
         </ul>
       </div>
@@ -60,33 +62,33 @@
   <div class="container">
     <div class="row">
       <h3>Cadastrar novo cliente</h3>
-      <form>
+      <form id="newClient">
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Cliente</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Insira o nome do cliente.">
+          <label for="user" class="form-label">Cliente</label>
+          <input type="user" class="form-control" id="user" aria-describedby="userHelp" placeholder="Insira o nome do cliente.">
         </div>
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Endereço</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Insira o endereço físico do cliente.">
+          <label for="address" class="form-label">Endereço</label>
+          <input type="address" class="form-control" id="address" aria-describedby="userHelp" placeholder="Insira o endereço físico do cliente.">
         </div>
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Telefone</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Insira o Telefone do cliente.">
+          <label for="phone" class="form-label">Telefone</label>
+          <input type="phone" class="form-control" id="phone" aria-describedby="phoneHelp" placeholder="Insira o Telefone do cliente.">
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">E-mail</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Insira o e-mail do cliente aqui">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Insira o e-mail do cliente aqui">
         </div>
         <div class="mb-3">
           <label for="password" class="form-label">Senha</label>
-          <input type="password" class="form-control" id="password" aria-describedby="Password" placeholder="Insira a senha do cliente aqui">
+          <input type="password" class="form-control" id="password" aria-describedby="passwordHelp" placeholder="Insira a senha do cliente aqui">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
       </form>
     </div>
   </div>
 
-
+  <script src="./script.js"></script>
   <!-- Bootstrap js bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
