@@ -1,22 +1,30 @@
 <?php
 
-class Entrega 
-{
-    private $mysql;
+class Entrega {
 
-    public function __construct(mysqli $mysql)
-    {
-        $this->mysql = $mysql;
+    private $conn;
+
+    private function __construct (mysqli $conn) {
+        $this->conn = $conn;
     }
 
-    public function exibirEntregas()
-    {
+    public function getEntrega(): array {
 
-        $busca = $this->mysql->query("SELECT * FROM `entregas`");
+        $query = $this->conn->query("SELECT * FROM `entregas`");
 
-        $entregas = $busca->fetch_all(MYSQLI_ASSOC);
+        $entregas = $query->fetch_all(MYSQLI_ASSOC);
 
         return $entregas;
+    }
+
+    public function getEntregaPorId (int $id) {
+
+        $selecionaEntrega = $this->conn->prepare("SELECT * FROM `entregas` WHERE id=?;");
+        $selecionaEntrega->bind_param("s", $id);
+        $selecionaEntrega->execute();
+        $entrega = $selecionaEntrega->get_result()->fetch_assoc();
+
+        return $entrega;
     }
 
 

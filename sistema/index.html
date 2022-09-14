@@ -11,6 +11,7 @@
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!--Select Picker -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
   <!-- Leaflet-map -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
@@ -115,7 +116,7 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row" id="datatable">
         <div class="col-md-12">
           <table id="orderTable" class="display table table-striped" data-order='[[ 1, "asc" ]]' data-page-length='25'
             style="width:100%">
@@ -206,19 +207,27 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Criar Entrega</h5>
+            <h5 class="modal-title" id="ModalLabel">Criar Entrega</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form class="row g-3">
-              <label for="exampleFormControlInput1" class="form-label mb-2 mt-2">Cliente</label>
-              <div class="selectpicker">
-                <select id="selectpicker" data-live-search="true">
-                  <option>Cliente</option>
-                  <option>Cliente</option>
-                  <option>Cliente</option>
-                  <option>Cliente</option>
-                  <option>Cliente</option>
+            <form method='post' class="row g-3" id="createOrderForm">
+
+              <div class="col-6">
+                <label for="client-select">Cliente</label>
+                <select class='selectpicker form-control' data-live-search="true" name="client-select"
+                  id="client-select">
+                  
+                </select>
+              </div>
+              <div class="col-6">
+                <label for="fleet-select">Entregador</label>
+                <select class="selectpicker form-control" data-live-search="true" name='fleet-select' id="fleet-select">
+                  <option selected>Atribuir entregador</option>
+                  <option value="1">Anira</option>
+                  <option value="2">Jair Biroliro</option>
+                  <option value="3">Molusco</option>
+                  <option value="4">Jack Sparow</option>
                 </select>
               </div>
               <div>
@@ -233,21 +242,12 @@
                   aria-label="default input example">
               </div>
 
-              <div>
-                <label for="exampleFormControlInput1" class="form-label mb-2 mt-2">Atribuir Entregador</label>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Atribuir entregador</option>
-                  <option value="1">Anira</option>
-                  <option value="2">Jair Biroliro</option>
-                  <option value="3">Molusco</option>
-                  <option value="4">Jack Sparow</option>
-                </select>
-              </div>
-            </form>
+
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-            <button type="submit" class="btn btn-primary" id="btn-createOrder">Criar</button>
+            <button type="submit" class="btn btn-primary" for='createOrderForm' id="btn-createOrder">Criar</button>
+            </form>
           </div>
         </div>
       </div>
@@ -257,7 +257,7 @@
 
 
   <!-- Jquery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <!-- Script -->
   <!-- Datatable Script -->
   <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
@@ -267,8 +267,33 @@
   <script type="text/javascript" src="./map.js"></script>
   <!-- Bootstrap js bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+  <!-- SelectPicker -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
   <script src="./script.js"></script>
+
+  <script>
+    // $(document).ready(function () {
+        
+    //   $.ajax({
+    //     url: 'http://localhost/entregas_top/sistema/testes.php',
+    //     method: 'GET',
+    //     dataType: 'json',
+    //     sucess: function (data){
+    //       console.log(data);
+    //     }
+    //   });
+    
+
+
+
+    // })
+
+
+
+  </script>
+
 </body>
 
 </html>

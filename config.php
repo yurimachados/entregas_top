@@ -3,10 +3,9 @@
 $conn = new mysqli('localhost', 'root', '', 'entregas_top');
 $conn->set_charset('utf8');
 
-if($conn == true) {
-    echo 'Conexão estabelecida ';
-} else {
+if(!$conn){
    echo 'Conexão não estabelecida ';
+   die();
 }
 
 ?>
