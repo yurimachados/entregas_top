@@ -8,15 +8,13 @@ class Entregador {
         $this->conn = $conn;
     }
 
-    public function getEntregadores() {
+    public function getEntregadores(): array {
+
+        // Busca id e nome de todos entregadores cadastrados
 
         $listarEntregadores = $this->conn->query("SELECT id_entregador, entregador_nome FROM `entregador`");
         $entregadores = $listarEntregadores->fetch_all(MYSQLI_ASSOC);
-        return $entregadores;
-        // $result = extract($entregadores);
-
-        // var_dump($result);
-            
+        return $entregadores;            
     }
 
     public function getEntregadorPorId (int $id) {

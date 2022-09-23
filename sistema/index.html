@@ -35,7 +35,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/sistema/index.html"><i class="bi bi-house"></i>
+            <a class="nav-link active" aria-current="page" href="./index.html"><i class="bi bi-house"></i>
               Home</a>
           </li>
           <li class="nav-item">
@@ -215,31 +215,28 @@
 
               <div class="col-6">
                 <label for="client-select">Cliente</label>
-                <select class='selectpicker form-control' data-live-search="true" name="client-select"
-                  id="client-select">
-                  
+                <select class='selectpicker form-control' title="Selecione um cliente" data-live-search="true"
+                  name="client-select" id="client-select">
+
                 </select>
               </div>
               <div class="col-6">
                 <label for="fleet-select">Entregador</label>
-                <select class="selectpicker form-control" data-live-search="true" name='fleet-select' id="fleet-select">
-                  <option selected>Atribuir entregador</option>
-                  <option value="1">Anira</option>
-                  <option value="2">Jair Biroliro</option>
-                  <option value="3">Molusco</option>
-                  <option value="4">Jack Sparow</option>
+                <select class="selectpicker form-control" data-live-search="true" title="Selecione um entregador"
+                  name='fleet-select' id="fleet-select">
+
                 </select>
               </div>
               <div>
                 <label for="exampleFormControlInput1" class="form-label mb-2 mt-2">Endereço de Coleta</label>
                 <input class="form-control" type="text" placeholder="Insira o endereço de coleta"
-                  aria-label="default input example">
+                  aria-label="default input example" id="enderecoColeta">
               </div>
 
               <div>
                 <label for="exampleFormControlInput1" class="form-label mb-2 mt-2">Endereço de Entrega</label>
                 <input class="form-control" type="text" placeholder="Insira o endereço de entrega"
-                  aria-label="default input example">
+                  aria-label="default input example" id="enderecoEntrega">
               </div>
 
 
@@ -261,35 +258,25 @@
   <!-- Script -->
   <!-- Datatable Script -->
   <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-  <script type="text/javascript" src="./dataTable.js"></script>
   <!-- Map script -->
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-  <script type="text/javascript" src="./map.js"></script>
   <!-- Bootstrap js bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
   <!-- SelectPicker -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
-  <script src="./script.js"></script>
+  <!-- Scripts -->
+  <script type="text/javascript" src="./js/dataTable.js"></script>
+  <script type='text/javascript' src="./js/populaSelect.js"></script>
+  <script type="text/javascript" src="./js/map.js"></script>
+  <script type="text/javascript" src="./js/formPost.js"></script>
 
   <script>
-    // $(document).ready(function () {
-        
-    //   $.ajax({
-    //     url: 'http://localhost/entregas_top/sistema/testes.php',
-    //     method: 'GET',
-    //     dataType: 'json',
-    //     sucess: function (data){
-    //       console.log(data);
-    //     }
-    //   });
-    
 
+    // $('#fleet-select').selectpicker();
 
-
-    // })
-
+    // $('#client-select').selectpicker();
 
 
   </script>
