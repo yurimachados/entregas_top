@@ -1,11 +1,5 @@
 
 // Popular o select do entregador com os entregadores cadastrados no banco de dados
-
-// $('#fleet-select').selectpicker();
-
-// $('#client-select').selectpicker();
-
-
 $.ajax({
   url: 'http://localhost/entregas_top/sistema/populaEntregador.php',
   method: 'GET',
@@ -25,9 +19,9 @@ $.ajax({
   })
     }
   });
+
+
 // Popula o select do cliente com os clientes cadastrados no banco de dados
-
-
 $.ajax({
   url: 'http://localhost/entregas_top/sistema/populaCliente.php',
   method: 'GET',
@@ -37,7 +31,7 @@ $.ajax({
     //console.table(result)
     // Cria uma option para cada cliente do array
     $(result).each(function (i, client) {
-
+      // Cria uma option para cada cliente do array
       $('#client-select').append('<option value="' + client.id_cliente + '">' + client.cliente_nome + '</option>');
 
       // console.log(client.id_cliente)

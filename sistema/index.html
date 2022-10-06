@@ -128,74 +128,19 @@
                 <th>Endereço de Coleta</th>
                 <th>Endereço de Entrega</th>
                 <th>Status</th>
+                <th>Hora de criação</th>
               </tr>
             </thead>
-            <tbody>
+            <tfoot>
               <tr>
-                <td>1234</td>
-                <td>Pizzaria Barba Negra</td>
-                <td>Jack Sparow</td>
-                <td>Rua Pérola Negra - 486</td>
-                <td>Rua Jonny Deep - 789</td>
-                <td>Pronto</td>
+                <th>Nº da entrega</th>
+                <th>Cliente</th>
+                <th>Entregador</th>
+                <th>Endereço de Coleta</th>
+                <th>Endereço de Entrega</th>
+                <th>Status</th>
+                <th>Hora de criação</th>
               </tr>
-              <tr>
-                <td>7894</td>
-                <td>Pizzaria dos Metalurgicos</td>
-                <td>Molusco</td>
-                <td>Rua Dilma - 154</td>
-                <td>Rua Bolsa Familia - 1234</td>
-                <td>Entregando</td>
-              </tr>
-              <tr>
-                <td>1233</td>
-                <td>Padaria Tia Anira</td>
-                <td>Anira</td>
-                <td>Rua Das Poderosas - 457</td>
-                <td>Rua Envolver - 7349</td>
-                <td>No Cliente</td>
-              </tr>
-              <tr>
-                <td>7294</td>
-                <td>Pizzaria Barba Negra</td>
-                <td>Jack Sparow</td>
-                <td>Rua Pérola Negra - 486</td>
-                <td>Rua 7 mares - 5256</td>
-                <td>Pronto</td>
-              </tr>
-              <tr>
-                <td>6723</td>
-                <td>Pizzaria dos Metalurgicos</td>
-                <td>Molusco</td>
-                <td>Rua Dilma - 154</td>
-                <td>Rua Do comunismo - 451</td>
-                <td>Entregando</td>
-              </tr>
-              <tr>
-                <td>3698</td>
-                <td>Farmácia Taokey</td>
-                <td>Jair Biroliro</td>
-                <td>Rua Nióbio - 456</td>
-                <td>Rua Cloroquina - 334</td>
-                <td>Coletando</td>
-              </tr>
-              <tr>
-                <td>4126</td>
-                <td>Padaria Tia Anira</td>
-                <td>Anira</td>
-                <td>Rua Das Poderosas - 457</td>
-                <td>Avenida Burguesia - 5</td>
-                <td>Coletando</td>
-              </tr>
-              <tr>
-                <td>2594</td>
-                <td>Farmácia Taokey</td>
-                <td>Jair Birliro</td>
-                <td>Rua Nióbio - 456</td>
-                <td>Travessa Paulo Guedes - 1234</td>
-                <td>Coletando</td>
-              </tr>
-            </tbody>
           </table>
         </div>
       </div>
@@ -215,15 +160,17 @@
 
               <div class="col-6">
                 <label for="client-select">Cliente</label>
-                <select class='selectpicker form-control' title="Selecione um cliente" data-live-search="true"
-                  name="client-select" id="client-select">
+                <select class='form-control' title="Selecione um cliente" data-live-search="true" name="client-select"
+                  id="client-select">
+                  <option selected>Escolha um cliente</option>
 
                 </select>
               </div>
               <div class="col-6">
                 <label for="fleet-select">Entregador</label>
-                <select class="selectpicker form-control" data-live-search="true" title="Selecione um entregador"
-                  name='fleet-select' id="fleet-select">
+                <select class="form-control" data-live-search="true" title="Selecione um entregador" name='fleet-select'
+                  id="fleet-select">
+                  <option selected>Escolha um entregador</option>
 
                 </select>
               </div>
@@ -274,7 +221,7 @@
 
   <script>
 
-    // $('#fleet-select').selectpicker();
+    // $('.selectpicker').selectpicker();
 
     // $('#client-select').selectpicker();
 

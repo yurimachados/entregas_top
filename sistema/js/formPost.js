@@ -1,4 +1,4 @@
-$('#createOrderForm').submit(function (e) {
+$(document).on('submit', '#createOrderForm', function (e) {
 
   e.preventDefault;
 
@@ -7,21 +7,34 @@ $('#createOrderForm').submit(function (e) {
   e_coleta = $('#enderecoColeta').val();
   e_entrega = $('#enderecoEntrega').val();
 
+  if(e_cliente != '' && e_entregador != '' && e_coleta != '' && e_entrega!= '')
+  {
+    $.ajax({
+      url: 'http://localhost/entregas_top/sistema/criarEntrega.php',
+      method: 'POST',
+      data: {
+        cliente: e_cliente,
+        entregador: e_entregador,
+        coleta: e_coleta,
+        entrega: e_entrega
+      },
+      dataType: 'json',
+      success: function(data){
 
+        let json = JSON.parse(data);
+        let status = json.status;
+        if (status == 'success')
+        {
+          table = $('#orderTable').DataTable();
+          table.draw();
+          alert('Entrega criada com sucesso!')
+        }        
 
-  $.ajax({
-    url: 'http://localhost/entregas_top/sistema/criarEntrega.php',
-    method: 'POST',
-    data: {
-      cliente: e_cliente,
-      entregador: e_entregador,
-      coleta: e_coleta,
-      entrega: e_entrega
-    },
-    dataType: 'json',
-  }).done(function (result) {
-
-    alert(result);
-  })
-
+      }
+    })
+  }  
+  else
+  {
+    alert('Por favor, preencha todos os campos para criar a entrega!');
+  }
 })
