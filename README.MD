@@ -20,4 +20,9 @@ O objetivo do teste é desenvolver um painel onde seja possível:
 
 ### Deploy 
 
-em breve...
+- Certifique-se de estar com <a href='https://www.apachefriends.org/pt_br/index.html'>XAMPP</a> instalado na sua máquina
+- Com o XAMPP instalado corretamente, clone o repositório dentro da pasta htdocs.
+- Inicie o servidor apache e MySQL.
+- Para acessar o painel administrativo basta ir em http://localhost/entregas_top/sistema/.
+- Para acessar a base de dados basta ir em http://localhost/phpmyadmin/index.php.
+- No painel phpmyadmin importe o arquivo entregas_top.sql.
