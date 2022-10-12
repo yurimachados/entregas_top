@@ -6,6 +6,7 @@
 - Desenvolvido com Front-End em HTML5 e CSS3, utilizando o framework bootstrap; Javascript, utilizando a bliblioteca jquery.
 - Back-End está sendo desenvolvido em PHP.
 - Já no banco de dados, será em MySQL.
+- O projeto foi desenvolvido utilizando Git para gerenciar o versionamento e implementar novas features com segurança.
 
 ### Descrição
 
