@@ -10,13 +10,18 @@
 
 ### Descrição
 
-O objetivo do teste é desenvolver um painel onde seja possível:
+O objetivo do projeto é desenvolver um painel com as seguintes funcionalidades:
 
-- Criar entregas.
+- Criar entregas. :white_check_mark:
 - Consultar entregas.
+- Visualizar mapa da operação.
+- Visualizar datatable das entregas.
+- Cadastrar entregadores. :white_check_mark:
+- Cadastrar clientes. :white_check_mark:
+- Efetuar login.
 - Editar entregas.
 - Alterar o status de entregas.
-- Atribuir entregadores às entregas. 
+- Atribuir entregadores às entregas. :white_check_mark:
 
 
 ### Deploy 
