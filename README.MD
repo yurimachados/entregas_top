@@ -1,21 +1,15 @@
-# Teste Desenvolvedor Fullstack 
+# Entregas Top
 
-### Contexto
+### Projeto
 
-Na plataforma da <a href="https://entregas.gohusky.net/sistema/">Husky</a>, existem três atores principais que se relacionam com uma
-entrega: a operação de motoboy que recebe a solicitação de entrega; o cliente da
-empresa de motoboy que solicita uma entrega; o entregador que realiza a entrega.
-
-Cada entrega possui as seguintes informações: cliente, entregador, status, ponto de
-coleta, ponto de destino. Todos os campos são obrigatórios na criação de uma
-entrega, menos o entregador.
-
-Cada entrega possui pelo menos 4 status: Novo, atribuído assim que a entrega é
-criada; Entregando, atribuído quando o entregador está se deslocando para o ponto
-de destino; Finalizado, atribuído quando a entrega foi feita com sucesso; Cancelada,
-quando a entrega não foi realizada.
+- Sistema de controle logístico para empresas de entregas <a href='https://en.wikipedia.org/wiki/Last_mile_(transportation)'>last mile</a>.
+- Desenvolvido com Front-End em HTML5 e CSS3, utilizando o framework bootstra. Já a parte lógica do cliente Javascript, utilizando a bliblioteca jquery.
+- Back-End está sendo desenvolvido em PHP.
+- Já no banco de dados, será em MySQL.
 
 ### Descrição
+
+
 
 O objetivo do teste é desenvolver um painel onde seja possível: Criar entregas,
 consultar entregas, editar entregas, alterar o status de entregas e atribuir
