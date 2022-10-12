@@ -3,7 +3,7 @@
 ### Projeto
 
 - Sistema de controle logístico para empresas de entregas <a href='https://en.wikipedia.org/wiki/Last_mile_(transportation)'>last mile</a>.
-- Desenvolvido com Front-End em HTML5 e CSS3, utilizando o framework bootstra e Javascript, utilizando a bliblioteca jquery.
+- Desenvolvido com Front-End em HTML5 e CSS3, utilizando o framework bootstrap; Javascript, utilizando a bliblioteca jquery.
 - Back-End está sendo desenvolvido em PHP.
 - Já no banco de dados, será em MySQL.
 
